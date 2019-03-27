@@ -29,6 +29,10 @@ app.use ((request, response, next) => {
         title:'thing'
     });
 });
+
+app.listen(port, () => {
+    console.log(`Sever is up on the port ${port}`);
+});
 // app.use((request, response, next) => {
 //     var time = new Date().toString();
 //     // console.log(`${time}: ${request.method} ${request.url}`);
