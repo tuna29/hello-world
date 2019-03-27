@@ -2,7 +2,7 @@ const express = require('express');
 const currency = require('./app.js')
 const hbs = require('hbs');
 const fs = require('fs');
-
+const port = process.en.PORT || 8080
 var app = express();
 
 hbs.registerPartials((__dirname + '/views/partials'))
@@ -85,6 +85,6 @@ app.get('/currency', (request, response) => {
     })
 });
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log('Server is up on the port 8080');
 });
